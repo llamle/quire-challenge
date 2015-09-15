@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quire Code Challenge</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+  <body ng-app="quireTest" ng-controller="MainCtrl">
+    <!-- <div>
+      {{question}}
+    </div>
+
+    <ul>
+      <li ng-repeat="answer in answers">
+        {{answer.title}} - {{answer.correct}}
+      </li>
+    </ul> -->
+
+    <form name="form" ng-controller='MainCtrl'>
+      <div>
+        {{question}}
+      </div>
+
+      <ul>
+        <li ng-repeat="answer in answers">
+          <label><input type="radio" ng-model="answer.value" ng-value="value" ng-click="isCorrect = {{answer.value}}">{{answer.title}}</label>
+          <br>
+          <tt> Is this correct?  - {{answer.value || json}}
+        </li>
+      </ul>
+    </form>
+
+    <div ng-switch="isCorrect">
+      <div ng-switch-when="yes">
+        <h3>Lorem ipsum</h3>
+      </div>
+    </div>
+
+  </body>
+</html>
