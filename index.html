@@ -16,12 +16,15 @@
 
       <ul>
         <li ng-repeat="answer in answers">
-          <label><input type="radio" ng-model="answer.value" ng-value="value" ng-click="isCorrect = {{answer.value}}">{{answer.title}}</label>
+          <label><input type="radio" ng-model="answer.value" ng-value="value" ng-click="isCorrect = answer.value">{{answer.title}}</label>
           <br>
           <tt> Is this correct?  - {{answer.value || json}}
         </li>
       </ul>
     </form>
+
+    <br>
+    <tt> Is this correct?  - {{answer.value || json}}
 
   </body>
 </html>
