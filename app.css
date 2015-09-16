@@ -12,6 +12,10 @@
   border-radius: 5px;
 }
 
+.makeWhite{
+  color: white !important;
+}
+
 label:hover {
   background-color: white;
   color: #1C6E21;
