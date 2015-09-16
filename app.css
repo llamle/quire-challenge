@@ -34,37 +34,43 @@ li input {
   width: 0;
 }
 
-.bubble1 {
- background-color: white;
- border-radius: 50%;
- width: 15px;
- height: 15px;
- position: absolute;
- left: 650px;
- top: 325px;
+@media screen and (min-width: 762px) {
+  .bubble1 {
+   background-color: white;
+   border-radius: 50%;
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   left: 55%;
+   top: 72%;
+  }
 }
 
-.bubble2 {
-  background-color: white;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  left: 675px;
-  top: 300px;
+@media screen and (min-width: 762px) {
+  .bubble2 {
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 57%;
+    top: 65%;
+  }
 }
 
-.bubble3 {
-  background-color: white;
-  border-radius: 15px;
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  left: 700px;
-  top: 200px;
-  color: #1C6E21;
-  text-align: center;
-  vertical-align: middle;
+@media screen and (min-width: 762px) {
+  .bubble3 {
+    background-color: white;
+    border-radius: 15px;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 59%;
+    top: 40%;
+    color: #1C6E21;
+    text-align: center;
+    vertical-align: middle;
+  }
 }
 
 .ye {
