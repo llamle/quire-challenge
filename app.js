@@ -36,4 +36,10 @@ app.controller('MainCtrl', ['$scope', function($scope) {
     '“Never tell me the odds.” – Han Solo',
   ];
 
+  $scope.selected = -1;
+
+  $scope.select= function(index) {
+     $scope.selected = index;
+  };
+
 }]);

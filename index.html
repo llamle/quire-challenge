@@ -54,7 +54,7 @@
 
               <ul>
                 <li ng-repeat="answer in answers">
-                  <label for="UNIQUELABEL{{$id}}"><input id="UNIQUELABEL{{$id}}" type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value" style="visibility:hidden" class="listHover"><strong>{{answer.title}}</strong></label>
+                  <label for="UNIQUELABEL{{$id}}"  ng-click="select($index)" ng-class="{active: $index == selected}"><input id="UNIQUELABEL{{$id}}" type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value" style="visibility:hidden" class="listHover"><strong>{{answer.title}}</strong></label>
                   <br>
                   <!-- <tt> Is this correct?  - {{answer.value}} -->
                 </li>
