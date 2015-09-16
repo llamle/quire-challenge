@@ -3,6 +3,8 @@ var app = angular.module('quireTest', []);
 app.controller('MainCtrl', ['$scope', function($scope) {
   $scope.test = 'Hello world!';
 
+  $scope.isCorrect = {value:'not sure'};
+
   $scope.question = 'What does it mean to be an accredited investor?';
 
   $scope.answers = [
