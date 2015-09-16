@@ -5,29 +5,94 @@
     <title>Quire Code Challenge</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="quirecss.css">
     <link rel="stylesheet" type="text/css" href="app.css">
   </head>
-  <body ng-app="quireTest" ng-controller="MainCtrl">
+  <body ng-app="quireTest" ng-controller="MainCtrl" class="home green quire">
 
-    <form name="form">
-      <div>
-        {{question}}
-      </div>
+    <header class="">
+        <nav>
+          <ul>
+            <li class="mobile hover-target"><i class="glyphicon glyphicon-menu-hamburger pull-right"></i></li>
 
-      <ul>
-        <li ng-repeat="answer in answers">
-          <label><input type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value">{{answer.title}}</label>
+
+
+              <li class="desktop nav-btn account">
+                <a href="/dashboard" class="home-profile-menu-item app-profile">
+                  Dashboard
+                </a>
+              </li>
+
+              <li class="mobile"><a href="/me/account">Account</a></li>
+
+
+
+
+            <li class="link-right"><a href="/about">About</a></li>
+            <li class="link-right"><a href="https://medium.com/by-quire/" target="_blank">Blog</a></li>
+            <li><a href="/companies">companies</a></li>
+            <li><a href="/FAQ">how it works</a></li>
+          </ul>
+        </nav>
+        <a href="/" class="logo" title="Quire"></a>
+      </header>
+
+    <div class="wrap ">
+
+      <section id="form">
+        <div class="container">
+          <div class="row-20">
+            <p class="headline">
+              {{question}}<br>
+            </p>
+          </div>
+
+          <form name="form" class="formText">
+
+            <div class="row-80 intro-container vertical-center">
+              <p class="intro">
+
+              <ul>
+                <li ng-repeat="answer in answers">
+                  <label for="UNIQUELABEL{{$id}}"><input id="UNIQUELABEL{{$id}}" type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value" style="visibility:hidden" class="listHover">{{answer.title}}</label>
+                  <br>
+                  <!-- <tt> Is this correct?  - {{answer.value}} -->
+                </li>
+                <input type="submit" name="Submit" value="Submit" ng-click="verify()" class="btn btn-inverted">
+              </ul>
+              </p>
+            </form>
+            </div>
+
+
+
           <br>
-          <tt> Is this correct?  - {{answer.value}}
-        </li>
-      </ul>
+          <tt> Is this correct?  - {{isCorrect.value}}
+        </div>
 
-      <input type="submit" name="Submit" value="Submit" ng-click="verify()">
+        </div>
+      </section>
 
-    </form>
+      <!-- <form name="form">
+        <div>
+          {{question}}
+        </div>
 
-    <br>
-    <tt> Is this correct?  - {{isCorrect.value}}
+        <ul>
+          <li ng-repeat="answer in answers">
+            <label><input type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value">{{answer.title}}</label>
+            <br>
+            <tt> Is this correct?  - {{answer.value}}
+          </li>
+        </ul>
+
+        <input type="submit" name="Submit" value="Submit" ng-click="verify()">
+
+      </form>
+
+      <br>
+      <tt> Is this correct?  - {{isCorrect.value}}
+    </div> -->
 
   </body>
 </html>
