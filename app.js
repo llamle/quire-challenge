@@ -17,14 +17,14 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 
   $scope.verify = function() {
     if ($scope.isCorrect.value === 'yes') {
-      alert('Awesome, this is correct!');
+      $scope.response = {value: 'Awesome, this is correct!'};
     } else if ($scope.isCorrect.value === 'not sure') {
-      alert('“Do. Or do not. There is no try.” – Yoda');
+      $scope.response = {value: '“Do. Or do not. There is no try.” – Yoda'};
     }
     else {
       var randomNumber = Math.floor(Math.random()*$scope.incorrect.length);
 
-      alert($scope.incorrect[randomNumber]);
+      $scope.response = {value: $scope.incorrect[randomNumber]};
     }
   };
 

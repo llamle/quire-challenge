@@ -49,12 +49,12 @@
 
           <form name="form" class="formText">
 
-            <div class="row-80 intro-container vertical-center">
+            <div class="row-80 vertical-center">
               <p class="intro">
 
               <ul>
                 <li ng-repeat="answer in answers">
-                  <label for="UNIQUELABEL{{$id}}"><input id="UNIQUELABEL{{$id}}" type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value" style="visibility:hidden" class="listHover">{{answer.title}}</label>
+                  <label for="UNIQUELABEL{{$id}}"><input id="UNIQUELABEL{{$id}}" type="radio" name="answer" value="{{answer.value}}" ng-click="isCorrect.value = answer.value" style="visibility:hidden" class="listHover"><strong>{{answer.title}}</strong></label>
                   <br>
                   <!-- <tt> Is this correct?  - {{answer.value}} -->
                 </li>
@@ -64,7 +64,11 @@
             </form>
             </div>
 
+              <div class="ye"><i></i></div>
 
+              <div class="bubble1"></div>
+              <div class="bubble2"></div>
+              <div class="bubble3">{{response.value}}</div>
 
           <br>
           <tt> Is this correct?  - {{isCorrect.value}}
