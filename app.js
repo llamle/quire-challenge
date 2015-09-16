@@ -14,4 +14,12 @@ app.controller('MainCtrl', ['$scope', function($scope) {
     {title: 'All of the above', value: 'no'}
   ];
 
+  $scope.verify = function() {
+    if ($scope.isCorrect.value === 'yes') {
+      alert('Awesome, this is correct!');
+    } else {
+      alert('We should give this another try...')
+    }
+  }
+
 }]);
